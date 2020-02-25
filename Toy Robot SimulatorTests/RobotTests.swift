@@ -112,4 +112,24 @@ class RobotTests: XCTestCase {
         robot.right()
         XCTAssertEqual(robot.position?.facingDirection, .west)
     }
+    
+    func testExampleInput() {
+        // a) PLACE 0,0,NORTH MOVE REPORT Output: 0,1,NORTH
+        robot.place(position: Position(facingDirection: .north, coordinate: Coordinate(x: 0, y: 0)))
+        robot.move()
+        XCTAssertEqual(robot.position, Position(facingDirection: .north, coordinate: Coordinate(x: 0, y: 1)))
+        
+        // b) PLACE 0,0,NORTH LEFT REPORT Output: 0,0,WEST
+        robot.place(position: Position(facingDirection: .north, coordinate: Coordinate(x: 0, y: 0)))
+        robot.left()
+        XCTAssertEqual(robot.position, Position(facingDirection: .west, coordinate: Coordinate(x: 0, y: 0)))
+        
+        // c) PLACE 1,2,EAST MOVE MOVE LEFT MOVE REPORT Output: 3,3,NORTH
+        robot.place(position: Position(facingDirection: .east, coordinate: Coordinate(x: 1, y: 2)))
+        robot.move()
+        robot.move()
+        robot.left()
+        robot.move()
+        XCTAssertEqual(robot.position, Position(facingDirection: .north, coordinate: Coordinate(x: 3, y: 3)))
+    }
 }

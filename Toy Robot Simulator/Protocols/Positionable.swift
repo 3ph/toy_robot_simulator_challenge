@@ -15,7 +15,7 @@ enum FacingDirection: Int, CaseIterable {
     case west
 }
 
-/// Represents coordinate on the tabletop (X,Y)
+/// Represents coordinate (X,Y)
 struct Coordinate: Equatable {
     let x: Int
     let y: Int
