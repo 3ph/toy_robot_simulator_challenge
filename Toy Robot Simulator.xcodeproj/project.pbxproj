@@ -23,6 +23,8 @@
 		A0AC161224052580000F7839 /* Placeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC161124052580000F7839 /* Placeable.swift */; };
 		A0AC161324052580000F7839 /* Placeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC161124052580000F7839 /* Placeable.swift */; };
 		A0AC161524052683000F7839 /* RobotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC161424052683000F7839 /* RobotTests.swift */; };
+		A0AC161724052907000F7839 /* Movable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC161624052907000F7839 /* Movable.swift */; };
+		A0AC161824052907000F7839 /* Movable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC161624052907000F7839 /* Movable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		A0AC160E24051F4F000F7839 /* Positioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positioner.swift; sourceTree = "<group>"; };
 		A0AC161124052580000F7839 /* Placeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeable.swift; sourceTree = "<group>"; };
 		A0AC161424052683000F7839 /* RobotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotTests.swift; sourceTree = "<group>"; };
+		A0AC161624052907000F7839 /* Movable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,7 @@
 			children = (
 				A0AC160724051585000F7839 /* Positionable.swift */,
 				A0AC161124052580000F7839 /* Placeable.swift */,
+				A0AC161624052907000F7839 /* Movable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -248,6 +252,7 @@
 				A0AC15E4240514AA000F7839 /* AppDelegate.swift in Sources */,
 				A0AC15E6240514AA000F7839 /* SceneDelegate.swift in Sources */,
 				A0AC160824051585000F7839 /* Positionable.swift in Sources */,
+				A0AC161724052907000F7839 /* Movable.swift in Sources */,
 				A0AC15E8240514AA000F7839 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0AC161824052907000F7839 /* Movable.swift in Sources */,
 				A0AC160924051585000F7839 /* Positionable.swift in Sources */,
 				A0AC161324052580000F7839 /* Placeable.swift in Sources */,
 				A0AC161024051F4F000F7839 /* Positioner.swift in Sources */,

@@ -7,9 +7,9 @@
 
 import Foundation
 
-// Represents object which can be placed on tabletop
+// Represents object which can be placed
 protocol Placeable {
-    /// Flag determining if the object is placed on the tabletop
+    /// Flag determining if the object is placed
     var isPlaced: Bool { get }
     /// Place on given position
     func place(position: Position)

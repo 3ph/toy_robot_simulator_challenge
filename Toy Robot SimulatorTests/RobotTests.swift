@@ -43,4 +43,48 @@ class RobotTests: XCTestCase {
         XCTAssertEqual(robot.position?.facingDirection, .west)
         XCTAssertEqual(robot.position?.coordinate, Coordinate(x: 0, y: 0))
     }
+    
+    func testMovable() {
+        // Initially not placed, robot needs to be placed to be able to move
+        XCTAssertFalse(robot.isPlaced)
+        
+        // place to south west corner, facing south
+        let initialPosition1 = Position(facingDirection: .south, coordinate: Coordinate(x: 0, y: 0))
+        robot.place(position: initialPosition1)
+        robot.move()
+        XCTAssertEqual(robot.position, initialPosition1)
+        
+        // place to south west corner, facing north
+        let initialPosition2 = Position(facingDirection: .north, coordinate: Coordinate(x: 0, y: 0))
+        robot.place(position: initialPosition2)
+        robot.move()
+        // x hasn't changed
+        XCTAssertEqual(robot.position?.coordinate.x, initialPosition2.coordinate.x)
+        // y has moved north
+        XCTAssertEqual(robot.position?.coordinate.y, 1)
+        robot.move()
+        robot.move()
+        XCTAssertEqual(robot.position?.coordinate.y, 3)
+        robot.move()
+        XCTAssertEqual(robot.position?.coordinate.y, 4)
+        // can't move outside the tabletop
+        robot.move()
+        XCTAssertEqual(robot.position?.coordinate.y, 4)
+
+        // place to the same coordinates just facing east
+        let initialPosition3 = Position(facingDirection: .east, coordinate: robot.position!.coordinate)
+        robot.place(position: initialPosition3)
+        XCTAssertEqual(robot.position?.facingDirection, .east)
+        // moving east
+        robot.move()
+        XCTAssertEqual(robot.position?.coordinate.y, initialPosition3.coordinate.y)
+        XCTAssertEqual(robot.position?.coordinate.x, 1)
+        robot.move()
+        robot.move()
+        robot.move()
+        XCTAssertEqual(robot.position?.coordinate.x, 4)
+        robot.move()
+        // can't move outside the tabletop
+        XCTAssertEqual(robot.position?.coordinate.x, 4)
+    }
 }

@@ -31,3 +31,17 @@ extension Robot: Placeable {
         _positioner.position = position
     }
 }
+
+extension Robot: Movable {
+    func move() {
+        if let position = position {
+            // calculate new coordinate
+            let newCoordinate = Coordinate(
+                x: position.coordinate.x + (position.facingDirection == .west ? -1 : position.facingDirection == .east ? 1 : 0),
+                y: position.coordinate.y + (position.facingDirection == .south ? -1 : position.facingDirection == .north ? 1 : 0)
+            )
+            _positioner.position = Position(facingDirection: position.facingDirection,
+                                            coordinate: newCoordinate)
+        }
+    }
+}

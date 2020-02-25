@@ -21,7 +21,7 @@ struct Coordinate: Equatable {
     let y: Int
 }
 
-/// Represents position (coordinate and facing direction) on the tabletop
+/// Represents position (coordinate and facing direction)
 struct Position: Equatable {
     let facingDirection: FacingDirection
     let coordinate: Coordinate
@@ -32,8 +32,8 @@ struct Position: Equatable {
     }
 }
 
-/// Represents object which can be positioned on the tabletop
+/// Represents object which can be positioned
 protocol Positionable {
-    /// Current position on the tabletop or nil if there is none
+    /// Current position or nil if there is none
     var position: Position? { get set }
 }
