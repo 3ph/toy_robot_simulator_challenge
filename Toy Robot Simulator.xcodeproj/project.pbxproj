@@ -27,6 +27,8 @@
 		A0AC161824052907000F7839 /* Movable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC161624052907000F7839 /* Movable.swift */; };
 		A0AC161A24052EF2000F7839 /* Turnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC161924052EF2000F7839 /* Turnable.swift */; };
 		A0AC161B24052EF2000F7839 /* Turnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC161924052EF2000F7839 /* Turnable.swift */; };
+		A0AC161D240536D7000F7839 /* Reportable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC161C240536D7000F7839 /* Reportable.swift */; };
+		A0AC161E240536D7000F7839 /* Reportable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC161C240536D7000F7839 /* Reportable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		A0AC161424052683000F7839 /* RobotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotTests.swift; sourceTree = "<group>"; };
 		A0AC161624052907000F7839 /* Movable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movable.swift; sourceTree = "<group>"; };
 		A0AC161924052EF2000F7839 /* Turnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turnable.swift; sourceTree = "<group>"; };
+		A0AC161C240536D7000F7839 /* Reportable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reportable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,7 @@
 				A0AC161124052580000F7839 /* Placeable.swift */,
 				A0AC161624052907000F7839 /* Movable.swift */,
 				A0AC161924052EF2000F7839 /* Turnable.swift */,
+				A0AC161C240536D7000F7839 /* Reportable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -253,6 +257,7 @@
 				A0AC160B240517E3000F7839 /* Robot.swift in Sources */,
 				A0AC161224052580000F7839 /* Placeable.swift in Sources */,
 				A0AC161A24052EF2000F7839 /* Turnable.swift in Sources */,
+				A0AC161D240536D7000F7839 /* Reportable.swift in Sources */,
 				A0AC160F24051F4F000F7839 /* Positioner.swift in Sources */,
 				A0AC15E4240514AA000F7839 /* AppDelegate.swift in Sources */,
 				A0AC15E6240514AA000F7839 /* SceneDelegate.swift in Sources */,
@@ -272,6 +277,7 @@
 				A0AC161024051F4F000F7839 /* Positioner.swift in Sources */,
 				A0AC160C240517E3000F7839 /* Robot.swift in Sources */,
 				A0AC161524052683000F7839 /* RobotTests.swift in Sources */,
+				A0AC161E240536D7000F7839 /* Reportable.swift in Sources */,
 				A0AC161B24052EF2000F7839 /* Turnable.swift in Sources */,
 				A0AC15FB240514AC000F7839 /* PositionerTests.swift in Sources */,
 			);

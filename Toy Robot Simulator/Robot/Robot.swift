@@ -72,3 +72,12 @@ extension Robot: Turnable {
         }
     }
 }
+
+extension Robot: Reportable {
+    func report() -> String {
+        if let position = position {
+            return "\(position)"
+        }
+        return "UNKNOWN"
+    }
+}

@@ -132,4 +132,16 @@ class RobotTests: XCTestCase {
         robot.move()
         XCTAssertEqual(robot.position, Position(facingDirection: .north, coordinate: Coordinate(x: 3, y: 3)))
     }
+    
+    func testReportable() {
+        // Not place
+        XCTAssertEqual(robot.report(), "UNKNOWN")
+        
+        robot.place(position: Position(facingDirection: .east, coordinate: Coordinate(x: 1, y: 2)))
+        XCTAssertEqual(robot.report(), "1,2,EAST")
+        robot.move()
+        XCTAssertEqual(robot.report(), "2,2,EAST")
+        robot.left()
+        XCTAssertEqual(robot.report(), "2,2,NORTH")
+    }
 }
