@@ -13,6 +13,21 @@ class Robot {
         _positioner = Positioner(height: height, width: width)
     }
     
+    /// Current robot position
+    public var position: Position? {
+        return _positioner.position
+    }
+    
     // MARK: - Private
     private let _positioner: Positioner
+}
+
+extension Robot: Placeable {
+    var isPlaced: Bool {
+        return _positioner.position != nil
+    }
+    
+    func place(position: Position) {
+        _positioner.position = position
+    }
 }
