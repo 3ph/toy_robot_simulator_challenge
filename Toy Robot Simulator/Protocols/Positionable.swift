@@ -9,10 +9,10 @@ import Foundation
 
 /// Represents direction which the object is facing
 enum FacingDirection {
-    case North
-    case East
-    case South
-    case West
+    case north
+    case east
+    case south
+    case west
 }
 
 /// Represents coordinate on the tabletop (X,Y)

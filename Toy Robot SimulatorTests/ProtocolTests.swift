@@ -1,5 +1,5 @@
 //
-//  ProtocolTests.swift
+//  PositionerTests.swift
 //  Toy Robot SimulatorTests
 //
 //  Created by Tomas Friml on 25/02/20.
@@ -8,26 +8,66 @@
 import XCTest
 @testable import Toy_Robot_Simulator
 
-class ProtocolTests: XCTestCase {
+class PositionerTests: XCTestCase {
+    var positioner: Positioner!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        positioner = Positioner(height: 5, width: 5)
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testPositionable() {
-        let robot = Robot(height: 5, width: 5)
-        
+    func testPositionerInit() {
         // Position is initially not set
-        XCTAssertNil(robot.position)
+        XCTAssertNil(positioner.position)
+    }
+    
+    // Positions outside the tabletop
+    func testPositionerOutside() {
+        let outsidePosition1 = Position(facingDirection: .north,
+                                coordinate: Coordinate(x: -1, y: 0))
+        positioner.position = outsidePosition1
+        XCTAssertNil(positioner.position)
+
+        let outsidePosition2 = Position(facingDirection: .south,
+                                        coordinate: Coordinate(x: 5, y: 4))
+        positioner.position = outsidePosition2
+        XCTAssertNil(positioner.position)
+
+        let outsidePosition3 = Position(facingDirection: .south,
+                                        coordinate: Coordinate(x: 0, y: 5))
+        positioner.position = outsidePosition3
+        XCTAssertNil(positioner.position)
+
+        let outsidePosition4 = Position(facingDirection: .south,
+                                        coordinate: Coordinate(x: 5, y: 5))
+        positioner.position = outsidePosition4
+        XCTAssertNil(positioner.position)
         
-        let newPosition = Position(facingDirection: .North,
-                                   coordinate: Coordinate(x: 1, y: 1))
-        robot.position = newPosition
-        XCTAssertEqual(robot.position, newPosition)
-        
+    }
+    
+    // Positions on the tabletop
+    func testPositionInside() {
+        let insidePosition1 = Position(facingDirection: .south,
+                                       coordinate: Coordinate(x: 0, y: 0))
+        positioner.position = insidePosition1
+        XCTAssertEqual(positioner.position, insidePosition1)
+
+        let insidePosition2 = Position(facingDirection: .east,
+                                       coordinate: Coordinate(x: 4, y: 4))
+        positioner.position = insidePosition2
+        XCTAssertEqual(positioner.position, insidePosition2)
+
+        let insidePosition3 = Position(facingDirection: .east,
+                                       coordinate: Coordinate(x: 0, y: 4))
+        positioner.position = insidePosition3
+        XCTAssertEqual(positioner.position, insidePosition3)
+
+        let insidePosition4 = Position(facingDirection: .east,
+                                       coordinate: Coordinate(x: 2, y: 2))
+        positioner.position = insidePosition4
+        XCTAssertEqual(positioner.position, insidePosition4)
     }
 }

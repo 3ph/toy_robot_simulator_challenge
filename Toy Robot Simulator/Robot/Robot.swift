@@ -9,23 +9,10 @@ import Foundation
 
 class Robot {
     
-    init(height: Int, width: Int) {
-        _height = height
-        _width = width
+    public init(height: Int, width: Int) {
+        _positioner = Positioner(height: height, width: width)
     }
     
     // MARK: - Private
-    private let _height: Int
-    private let _width: Int
-    private var _currentPosition: Position?
-}
-
-extension Robot: Positionable {
-    var position: Position? {
-        get {
-            _currentPosition
-        }
-        set {
-        }
-    }
+    private let _positioner: Positioner
 }

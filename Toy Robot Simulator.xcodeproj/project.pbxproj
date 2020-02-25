@@ -18,6 +18,8 @@
 		A0AC160924051585000F7839 /* Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC160724051585000F7839 /* Positionable.swift */; };
 		A0AC160B240517E3000F7839 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC160A240517E3000F7839 /* Robot.swift */; };
 		A0AC160C240517E3000F7839 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC160A240517E3000F7839 /* Robot.swift */; };
+		A0AC160F24051F4F000F7839 /* Positioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC160E24051F4F000F7839 /* Positioner.swift */; };
+		A0AC161024051F4F000F7839 /* Positioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC160E24051F4F000F7839 /* Positioner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		A0AC15FC240514AC000F7839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0AC160724051585000F7839 /* Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positionable.swift; sourceTree = "<group>"; };
 		A0AC160A240517E3000F7839 /* Robot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
+		A0AC160E24051F4F000F7839 /* Positioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positioner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 		A0AC15E2240514AA000F7839 /* Toy Robot Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				A0AC160D24051F30000F7839 /* Protocols */,
 				A0AC160524051550000F7839 /* Robot */,
 				A0AC15E3240514AA000F7839 /* AppDelegate.swift */,
 				A0AC15E5240514AA000F7839 /* SceneDelegate.swift */,
@@ -117,10 +121,18 @@
 		A0AC160524051550000F7839 /* Robot */ = {
 			isa = PBXGroup;
 			children = (
-				A0AC160724051585000F7839 /* Positionable.swift */,
 				A0AC160A240517E3000F7839 /* Robot.swift */,
+				A0AC160E24051F4F000F7839 /* Positioner.swift */,
 			);
 			path = Robot;
+			sourceTree = "<group>";
+		};
+		A0AC160D24051F30000F7839 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A0AC160724051585000F7839 /* Positionable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0AC160B240517E3000F7839 /* Robot.swift in Sources */,
+				A0AC160F24051F4F000F7839 /* Positioner.swift in Sources */,
 				A0AC15E4240514AA000F7839 /* AppDelegate.swift in Sources */,
 				A0AC15E6240514AA000F7839 /* SceneDelegate.swift in Sources */,
 				A0AC160824051585000F7839 /* Positionable.swift in Sources */,
@@ -236,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0AC160924051585000F7839 /* Positionable.swift in Sources */,
+				A0AC161024051F4F000F7839 /* Positioner.swift in Sources */,
 				A0AC160C240517E3000F7839 /* Robot.swift in Sources */,
 				A0AC15FB240514AC000F7839 /* ProtocolTests.swift in Sources */,
 			);
