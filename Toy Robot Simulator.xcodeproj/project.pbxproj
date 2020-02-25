@@ -13,7 +13,11 @@
 		A0AC15EA240514AB000F7839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0AC15E9240514AB000F7839 /* Assets.xcassets */; };
 		A0AC15ED240514AB000F7839 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0AC15EC240514AB000F7839 /* Preview Assets.xcassets */; };
 		A0AC15F0240514AB000F7839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0AC15EE240514AB000F7839 /* LaunchScreen.storyboard */; };
-		A0AC15FB240514AC000F7839 /* Toy_Robot_SimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC15FA240514AC000F7839 /* Toy_Robot_SimulatorTests.swift */; };
+		A0AC15FB240514AC000F7839 /* ProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC15FA240514AC000F7839 /* ProtocolTests.swift */; };
+		A0AC160824051585000F7839 /* Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC160724051585000F7839 /* Positionable.swift */; };
+		A0AC160924051585000F7839 /* Positionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC160724051585000F7839 /* Positionable.swift */; };
+		A0AC160B240517E3000F7839 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC160A240517E3000F7839 /* Robot.swift */; };
+		A0AC160C240517E3000F7839 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC160A240517E3000F7839 /* Robot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +40,10 @@
 		A0AC15EF240514AB000F7839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0AC15F1240514AB000F7839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0AC15F6240514AB000F7839 /* Toy Robot SimulatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Toy Robot SimulatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0AC15FA240514AC000F7839 /* Toy_Robot_SimulatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toy_Robot_SimulatorTests.swift; sourceTree = "<group>"; };
+		A0AC15FA240514AC000F7839 /* ProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTests.swift; sourceTree = "<group>"; };
 		A0AC15FC240514AC000F7839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0AC160724051585000F7839 /* Positionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positionable.swift; sourceTree = "<group>"; };
+		A0AC160A240517E3000F7839 /* Robot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		A0AC15E2240514AA000F7839 /* Toy Robot Simulator */ = {
 			isa = PBXGroup;
 			children = (
+				A0AC160524051550000F7839 /* Robot */,
 				A0AC15E3240514AA000F7839 /* AppDelegate.swift */,
 				A0AC15E5240514AA000F7839 /* SceneDelegate.swift */,
 				A0AC15E7240514AA000F7839 /* ContentView.swift */,
@@ -101,10 +108,19 @@
 		A0AC15F9240514AC000F7839 /* Toy Robot SimulatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				A0AC15FA240514AC000F7839 /* Toy_Robot_SimulatorTests.swift */,
+				A0AC15FA240514AC000F7839 /* ProtocolTests.swift */,
 				A0AC15FC240514AC000F7839 /* Info.plist */,
 			);
 			path = "Toy Robot SimulatorTests";
+			sourceTree = "<group>";
+		};
+		A0AC160524051550000F7839 /* Robot */ = {
+			isa = PBXGroup;
+			children = (
+				A0AC160724051585000F7839 /* Positionable.swift */,
+				A0AC160A240517E3000F7839 /* Robot.swift */,
+			);
+			path = Robot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,8 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0AC160B240517E3000F7839 /* Robot.swift in Sources */,
 				A0AC15E4240514AA000F7839 /* AppDelegate.swift in Sources */,
 				A0AC15E6240514AA000F7839 /* SceneDelegate.swift in Sources */,
+				A0AC160824051585000F7839 /* Positionable.swift in Sources */,
 				A0AC15E8240514AA000F7839 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0AC15FB240514AC000F7839 /* Toy_Robot_SimulatorTests.swift in Sources */,
+				A0AC160924051585000F7839 /* Positionable.swift in Sources */,
+				A0AC160C240517E3000F7839 /* Robot.swift in Sources */,
+				A0AC15FB240514AC000F7839 /* ProtocolTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +390,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ToyRobotSimulator.Toy-Robot-Simulator";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ToyRobotSimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -390,7 +410,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.ToyRobotSimulator.Toy-Robot-Simulator";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ToyRobotSimulator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
