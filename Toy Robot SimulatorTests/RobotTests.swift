@@ -87,4 +87,29 @@ class RobotTests: XCTestCase {
         // can't move outside the tabletop
         XCTAssertEqual(robot.position?.coordinate.x, 4)
     }
+    
+    func testTurnable() {
+        // Initially not placed, robot needs to be placed to be able to move
+        XCTAssertFalse(robot.isPlaced)
+        robot.left()
+        XCTAssertFalse(robot.isPlaced)
+        
+        // place to south west corner, facing south
+        let initialPosition1 = Position(facingDirection: .south, coordinate: Coordinate(x: 0, y: 0))
+        robot.place(position: initialPosition1)
+        robot.left()
+        XCTAssertEqual(robot.position?.facingDirection, .east)
+        robot.left()
+        robot.left()
+        XCTAssertEqual(robot.position?.facingDirection, .west)
+        robot.right()
+        robot.left()
+        XCTAssertEqual(robot.position?.facingDirection, .west)
+        robot.right()
+        XCTAssertEqual(robot.position?.facingDirection, .north)
+        robot.right()
+        robot.right()
+        robot.right()
+        XCTAssertEqual(robot.position?.facingDirection, .west)
+    }
 }

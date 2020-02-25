@@ -14,8 +14,13 @@ class Robot {
     }
     
     /// Current robot position
-    public var position: Position? {
-        return _positioner.position
+    public private(set) var position: Position? {
+        get {
+            return _positioner.position
+        }
+        set {
+            _positioner.position = newValue
+        }
     }
     
     // MARK: - Private
@@ -24,11 +29,11 @@ class Robot {
 
 extension Robot: Placeable {
     var isPlaced: Bool {
-        return _positioner.position != nil
+        return position != nil
     }
     
     func place(position: Position) {
-        _positioner.position = position
+        self.position = position
     }
 }
 
@@ -40,8 +45,30 @@ extension Robot: Movable {
                 x: position.coordinate.x + (position.facingDirection == .west ? -1 : position.facingDirection == .east ? 1 : 0),
                 y: position.coordinate.y + (position.facingDirection == .south ? -1 : position.facingDirection == .north ? 1 : 0)
             )
-            _positioner.position = Position(facingDirection: position.facingDirection,
-                                            coordinate: newCoordinate)
+            self.position = Position(facingDirection: position.facingDirection,
+                                     coordinate: newCoordinate)
+        }
+    }
+}
+
+extension Robot: Turnable {
+    func left() {
+        if let position = position {
+            let direction = position.facingDirection
+            if let newDirection = direction.rawValue == 0 ? FacingDirection.allCases.last : FacingDirection(rawValue: direction.rawValue - 1) {
+                self.position = Position(facingDirection: newDirection,
+                                         coordinate: position.coordinate)
+            }
+        }
+    }
+    
+    func right() {
+        if let position = position {
+            let direction = position.facingDirection
+            if let newDirection = direction.rawValue == FacingDirection.allCases.count - 1 ? FacingDirection.allCases.first : FacingDirection(rawValue: direction.rawValue + 1) {
+                self.position = Position(facingDirection: newDirection,
+                                         coordinate: position.coordinate)
+            }
         }
     }
 }

@@ -8,8 +8,8 @@
 import Foundation
 
 /// Represents direction which the object is facing
-enum FacingDirection {
-    case north
+enum FacingDirection: Int, CaseIterable {
+    case north = 0
     case east
     case south
     case west
