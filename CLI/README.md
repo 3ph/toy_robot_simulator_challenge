@@ -23,4 +23,10 @@ Robot is navigated using several commands. These can be added in batch seperated
 * HELP: will show this help.
 * QUIT: will end the simulation.
 
+## Author
 
+Tom Friml, tom@tomfriml.com
+
+## License
+
+Toy Robot Simulator CLI is available under the MIT license. See the LICENSE file for more info.
