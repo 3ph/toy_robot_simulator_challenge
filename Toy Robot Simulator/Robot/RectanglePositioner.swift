@@ -7,7 +7,9 @@
 
 import Foundation
 
-class Positioner {
+// Represents positionable object on the rectangle surface
+// with (0,0) as bottom left corner
+class RectanglePositioner {
     
     init(height: Int, width: Int) {
         _height = height
@@ -19,21 +21,21 @@ class Positioner {
     private var _height: Int
     private var _currentPosition: Position?
 
-    /// Verify if the given coordinate is on the tabletop
+    /// Verify if the given coordinate is inside positioner's rectangle
     /// - Parameter coordinate: Coordinate to verify
-    private func isCoordinateOnTableTop(coordinate: Coordinate) -> Bool {
+    private func isCoordinateInsideRectangle(coordinate: Coordinate) -> Bool {
         return coordinate.x >= 0 && coordinate.x < _width
             && coordinate.y >= 0 && coordinate.y < _height
     }
 }
 
-extension Positioner: Positionable {
+extension RectanglePositioner: Positionable {
     var position: Position? {
         get {
             _currentPosition
         }
         set {
-            if let newPosition = newValue, isCoordinateOnTableTop(coordinate: newPosition.coordinate) {
+            if let newPosition = newValue, isCoordinateInsideRectangle(coordinate: newPosition.coordinate) {
                _currentPosition = newValue
             }
         }

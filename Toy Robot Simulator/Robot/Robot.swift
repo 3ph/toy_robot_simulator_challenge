@@ -10,7 +10,7 @@ import Foundation
 class Robot {
     
     public init(height: Int, width: Int) {
-        _positioner = Positioner(height: height, width: width)
+        _positioner = RectanglePositioner(height: height, width: width)
     }
     
     /// Current robot position
@@ -24,7 +24,7 @@ class Robot {
     }
     
     // MARK: - Private
-    private let _positioner: Positioner
+    private let _positioner: RectanglePositioner
 }
 
 extension Robot: Placeable {

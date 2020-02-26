@@ -35,11 +35,6 @@ struct Position: Equatable, CustomStringConvertible {
     let facingDirection: FacingDirection
     let coordinate: Coordinate
 
-    static func == (lhs: Position, rhs: Position) -> Bool {
-        return lhs.facingDirection == rhs.facingDirection
-            && lhs.coordinate == rhs.coordinate
-    }
-    
     var description: String {
         return "\(coordinate.x),\(coordinate.y),\(facingDirection)"
     }

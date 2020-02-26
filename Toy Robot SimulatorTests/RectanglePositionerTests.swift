@@ -1,5 +1,5 @@
 //
-//  PositionerTests.swift
+//  RectanglePositionerTests.swift
 //  Toy Robot SimulatorTests
 //
 //  Created by Tomas Friml on 25/02/20.
@@ -8,11 +8,11 @@
 import XCTest
 @testable import Toy_Robot_Simulator
 
-class PositionerTests: XCTestCase {
-    var positioner: Positioner!
+class RectanglePositionerTests: XCTestCase {
+    var positioner: RectanglePositioner!
 
     override func setUp() {
-        positioner = Positioner(height: 5, width: 5)
+        positioner = RectanglePositioner(height: 5, width: 5)
     }
 
     override func tearDown() {
