@@ -10,9 +10,11 @@ import XCTest
 class RobotTests: XCTestCase {
     
     var robot: Robot!
+    var positioner: Positionable!
 
     override func setUp() {
-        robot = Robot(height: 5, width: 5)
+        positioner = RectanglePositioner(height: 5, width: 5)
+        robot = Robot(positioner: positioner)
     }
 
     override func tearDown() {
@@ -135,7 +137,7 @@ class RobotTests: XCTestCase {
     
     func testReportable() {
         // Not place
-        XCTAssertEqual(robot.report(), "UNKNOWN")
+        XCTAssertEqual(robot.report(), "")
         
         robot.place(position: Position(facingDirection: .east, coordinate: Coordinate(x: 1, y: 2)))
         XCTAssertEqual(robot.report(), "1,2,EAST")

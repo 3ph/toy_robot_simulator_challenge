@@ -9,8 +9,8 @@ import Foundation
 
 class Robot {
     
-    public init(height: Int, width: Int) {
-        _positioner = RectanglePositioner(height: height, width: width)
+    public init(positioner: Positionable) {
+        _positioner = positioner
     }
     
     /// Current robot position
@@ -24,7 +24,7 @@ class Robot {
     }
     
     // MARK: - Private
-    private let _positioner: RectanglePositioner
+    private let _positioner: Positionable
 }
 
 extension Robot: Placeable {
@@ -78,6 +78,6 @@ extension Robot: Reportable {
         if let position = position {
             return "\(position)"
         }
-        return "UNKNOWN"
+        return ""
     }
 }

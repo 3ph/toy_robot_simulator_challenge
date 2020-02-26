@@ -22,6 +22,16 @@ enum FacingDirection: Int, CaseIterable, CustomStringConvertible {
         case .west: return "WEST"
         }
     }
+    
+    static func fromString(_ string: String) -> FacingDirection? {
+        switch string.lowercased() {
+        case "north": return .north
+        case "east": return .east
+        case "south": return .south
+        case "west": return .west
+        default: return nil
+        }
+    }
 }
 
 /// Represents coordinate (X,Y)
@@ -41,7 +51,7 @@ struct Position: Equatable, CustomStringConvertible {
 }
 
 /// Represents object which can be positioned
-protocol Positionable {
+protocol Positionable: AnyObject {
     /// Current position or nil if there is none
     var position: Position? { get set }
 }
