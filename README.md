@@ -4,7 +4,7 @@
 The application is a simulation of a toy robot moving on a square tabletop of configurable dimensions.
 
 ## CLI
-There is a command line interface for this simulation.
+There is a command line interface for this simulator.
 
 Please read the [instructions](CLI/README.md) to build and run simulator from command line.
 
