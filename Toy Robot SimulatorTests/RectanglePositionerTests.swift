@@ -19,6 +19,18 @@ class RectanglePositionerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    func testPositionerZero() {
+        let positioner = RectanglePositioner(height: 0, width: 0)
+        positioner.position = Position(facingDirection: .north, coordinate: Coordinate(x: 0, y: 0))
+        XCTAssertNil(positioner.position)
+
+        positioner.position = Position(facingDirection: .north, coordinate: Coordinate(x: -1, y: -1))
+        XCTAssertNil(positioner.position)
+
+        positioner.position = Position(facingDirection: .north, coordinate: Coordinate(x: 0, y: 2))
+        XCTAssertNil(positioner.position)
+    }
+
     func testPositionerInit() {
         // Position is initially not set
         XCTAssertNil(positioner.position)
