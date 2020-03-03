@@ -5,7 +5,7 @@
 //  Created by Tomas Friml on 3/03/20.
 //
 
-import Foundation
+import CoreGraphics
 import Combine
 
 protocol ControlsViewModelProtocol: Movable, Turnable, Reportable {
@@ -26,9 +26,14 @@ protocol TabletopViewModelProtocol {
 
 protocol PositionViewModelProtocol {
     /// Selected index of the position view
-    var selectedIndex: PassthroughSubject<Int?, Never> { get }
+    var selectedIndexSubject: PassthroughSubject<Int?, Never> { get }
     /// Facing direction of the robot
-    var facingDirection: PassthroughSubject<FacingDirection?, Never> { get }
+    var facingDirectionSubject: PassthroughSubject<FacingDirection?, Never> { get }
     /// Image (asset) name of the robot
     var imageName: String { get }
+    
+    /// User tapped on cell and facing direction was calculated based on the point tapped
+    func facingDirectionUpdated(facingDirection: FacingDirection)
+    /// Facing direction is confirmed (finger lifted) at cell with \index
+    func facingDirectionAndIndexConfirmed(cellIndex: Int)
 }

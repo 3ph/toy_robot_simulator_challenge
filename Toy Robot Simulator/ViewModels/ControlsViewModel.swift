@@ -9,7 +9,7 @@ import Foundation
 
 class ControlsViewModel: ControlsViewModelProtocol, ObservableObject {
     @Published var robotPosition: Position?
-    @Published var positionString: String = "UNKNOWN"
+    @Published var positionString: String = ""
     
     var robotPositionString: String {
         return positionString

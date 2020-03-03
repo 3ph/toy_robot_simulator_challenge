@@ -13,9 +13,10 @@ struct ContentView: View {
         GeometryReader { geometry in
             VStack(alignment: .center, spacing: 10) {
                 Spacer()
-                Text("Place robot on the tabletop by clicking at the desired cell")
+                Text("Place robot on the tabletop by tapping on the desired cell. Location of the tap will determine facing direction of the robot.")
                     .font(Font.smallPixel)
                     .multilineTextAlignment(.center)
+                    .padding()
                 Spacer()
                 TabletopView(viewModel: self.contentViewModel.tabletopViewModel)
                     .frame(width: geometry.size.width * 0.4,

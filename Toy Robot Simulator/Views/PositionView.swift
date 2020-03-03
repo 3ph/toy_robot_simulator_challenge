@@ -12,16 +12,40 @@ struct PositionView: View {
     @State var robotAngle: Angle = Angle(degrees: 0)
     
     var body: some View {
-        _image
+        GeometryReader { geometry in
+            self._image
             .resizable()
             .scaleEffect(0.9)
-            .opacity(isImageHidden ? 0 : 1)
-            .rotationEffect(robotAngle)
+                // NOTE: opacity can't be 0 otherwise taps won't work
+                .opacity(self.isImageHidden ? 0.0001 : 1)
+                .rotationEffect(self.robotAngle)
+            .gesture(
+                DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                .onChanged { value in
+                    let westDistance = value.location.x
+                    let eastDistance = geometry.size.width - value.location.x
+                    let northDistance = value.location.y
+                    let southDistance = geometry.size.height - value.location.y
+                    let minDistance = min(westDistance, eastDistance, northDistance, southDistance)
+                    switch minDistance {
+                    case westDistance: self._viewModel.facingDirectionUpdated(facingDirection: .west)
+                    case eastDistance: self._viewModel.facingDirectionUpdated(facingDirection: .east)
+                    case southDistance: self._viewModel.facingDirectionUpdated(facingDirection: .south)
+                    case northDistance: self._viewModel.facingDirectionUpdated(facingDirection: .north)
+                    default:
+                        break
+                    }
+                }
+                .onEnded { _ in
+                    self._viewModel.facingDirectionAndIndexConfirmed(cellIndex: self._index)
+                }
+            )
+        }
 
-        .onReceive(_viewModel.selectedIndex) { index in
+        .onReceive(_viewModel.selectedIndexSubject) { index in
             self.isImageHidden = index != self._index
         }
-        .onReceive(_viewModel.facingDirection) { facingDirection in
+        .onReceive(_viewModel.facingDirectionSubject) { facingDirection in
             guard let facingDirection = facingDirection else {
                 return
             }
@@ -47,4 +71,5 @@ struct PositionView: View {
     private let _image: Image
     /// Index of the cell
     private let _index: Int
+    private var _tapPoint: CGPoint = .zero
 }

@@ -48,12 +48,12 @@ struct ControlsView: View {
                     .foregroundColor(Color.black)
             })
             Spacer()
-                .frame(height: 25)
-            Text("\(_viewModel.robotPositionString)")
+                .frame(height: 20)
+            Text(" \(_viewModel.robotPositionString) ")
                 .font(Font.pixel)
                 .foregroundColor(Color.black)
                 .padding(5)
-                .border(Color.black, width: 1)
+                .border(_viewModel.robotPositionString.isEmpty ? Color.white : Color.black, width: 1)
         }
     }
     

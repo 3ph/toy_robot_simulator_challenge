@@ -24,15 +24,18 @@ final class ContentViewModel: ObservableObject {
         _controlsViewModel = ControlsViewModel(robot: _robot)
         _tabletopViewModel = TabletopViewModel(numRows: numRows, numColumns: numColumns)
         
-        // FIXME: testing
-        _robot.place(position: Position(facingDirection: .south, coordinate: Coordinate(x: 2, y: 2)))
-        
         _controlsViewModel.$robotPosition
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { position in
                 self.tabletopViewModel.robotPosition.send(position)
             })
             .store(in: &_subscriptions)
+        
+        _tabletopViewModel.robotPosition.sink(receiveValue: { position in
+            if let position = position, position != self._robot.position {
+                self._robot.place(position: position)
+            }
+            }).store(in: &_subscriptions)
     }
     
     // MARK: - Private
