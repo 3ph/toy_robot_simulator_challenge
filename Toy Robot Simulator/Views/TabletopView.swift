@@ -14,7 +14,7 @@ struct TabletopView: View {
                 ForEach(0..<self._numRows, id:\.self) { row in
                     HStack(alignment: .center, spacing: 0) {
                         ForEach(0..<self._numColumns, id:\.self) { column in
-                            self._cells[row * self._numRows + column]
+                            self._cells[(self._numRows - row - 1) * self._numColumns + column]
                                 .frame(width: geometry.size.width > geometry.size.height ? geometry.size.width / CGFloat(self._numColumns) : geometry.size.height / CGFloat(self._numRows),
                                        height: geometry.size.width > geometry.size.height ? geometry.size.width / CGFloat(self._numColumns) : geometry.size.height / CGFloat(self._numRows),
                                     alignment: .center)

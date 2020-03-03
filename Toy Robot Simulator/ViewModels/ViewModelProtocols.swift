@@ -27,6 +27,8 @@ protocol TabletopViewModelProtocol {
 protocol PositionViewModelProtocol {
     /// Selected index of the position view
     var selectedIndex: PassthroughSubject<Int?, Never> { get }
+    /// Facing direction of the robot
+    var facingDirection: PassthroughSubject<FacingDirection?, Never> { get }
     /// Image (asset) name of the robot
     var imageName: String { get }
 }

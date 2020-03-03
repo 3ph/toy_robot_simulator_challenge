@@ -9,14 +9,28 @@ import SwiftUI
 
 struct PositionView: View {
     @State var isImageHidden: Bool = true
+    @State var robotAngle: Angle = Angle(degrees: 0)
     
     var body: some View {
         _image
             .resizable()
             .scaleEffect(0.9)
             .opacity(isImageHidden ? 0 : 1)
-            .onReceive(_viewModel.selectedIndex) { index in
-                self.isImageHidden = index != self._index
+            .rotationEffect(robotAngle)
+
+        .onReceive(_viewModel.selectedIndex) { index in
+            self.isImageHidden = index != self._index
+        }
+        .onReceive(_viewModel.facingDirection) { facingDirection in
+            guard let facingDirection = facingDirection else {
+                return
+            }
+            switch facingDirection {
+            case .north: self.robotAngle.degrees = 180
+            case .east: self.robotAngle.degrees = 270
+            case .south: self.robotAngle.degrees = 0
+            case .west: self.robotAngle.degrees = 90
+            }
         }
     }
 

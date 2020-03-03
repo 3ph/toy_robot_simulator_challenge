@@ -32,9 +32,9 @@ class TabletopViewModel: TabletopViewModelProtocol, ObservableObject {
         
         robotPosition
             .receive(on: DispatchQueue.main)
-            .map { self.indexFrom(position: $0) }
-            .sink(receiveValue: { index in
-                self._positionViewModel.selectedIndex.send(index)
+            .sink(receiveValue: { position in
+                self._positionViewModel.selectedIndex.send(self.indexFrom(position: position))
+                self._positionViewModel.facingDirection.send(position?.facingDirection)
             })
             .store(in: &_subscriptions)
     }
@@ -54,6 +54,6 @@ class TabletopViewModel: TabletopViewModelProtocol, ObservableObject {
         guard let position = position else {
             return nil
         }
-        return _numColumns * position.coordinate.x + position.coordinate.y
+        return _numColumns * position.coordinate.y + position.coordinate.x
     }
 }

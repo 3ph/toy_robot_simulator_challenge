@@ -10,6 +10,7 @@ import Combine
 
 class PositionViewModel: PositionViewModelProtocol, ObservableObject {
     var selectedIndex = PassthroughSubject<Int?, Never>()
+    var facingDirection = PassthroughSubject<FacingDirection?, Never>()
     
     var imageName: String {
         return "bender"
