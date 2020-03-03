@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A07E709A240D0D160084C426 /* PixelFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E7099240D0D160084C426 /* PixelFont.swift */; };
+		A07E709B240D0F250084C426 /* HalfBoldPixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A07E7096240CF5120084C426 /* HalfBoldPixel.ttf */; };
+		A07E709E240DE30C0084C426 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E709D240DE30C0084C426 /* ContentViewModel.swift */; };
+		A07E70A0240DE8940084C426 /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E709F240DE8940084C426 /* ViewModelProtocols.swift */; };
+		A07E70A2240DED280084C426 /* ControlsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E70A1240DED280084C426 /* ControlsViewModel.swift */; };
+		A07E70A4240DF1610084C426 /* TabletopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E70A3240DF1610084C426 /* TabletopViewModel.swift */; };
+		A07E70A6240DFBE90084C426 /* PositionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E70A5240DFBE90084C426 /* PositionViewModel.swift */; };
 		A0AC15E4240514AA000F7839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC15E3240514AA000F7839 /* AppDelegate.swift */; };
 		A0AC15E6240514AA000F7839 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC15E5240514AA000F7839 /* SceneDelegate.swift */; };
 		A0AC15E8240514AA000F7839 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC15E7240514AA000F7839 /* ContentView.swift */; };
@@ -25,10 +32,12 @@
 		A0AC162D24066E86000F7839 /* Movable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC162424066E86000F7839 /* Movable.swift */; };
 		A0AC162E24066E86000F7839 /* Reportable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC162524066E86000F7839 /* Reportable.swift */; };
 		A0AC162F24066E86000F7839 /* Reportable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC162524066E86000F7839 /* Reportable.swift */; };
-		A0AC163224066EA3000F7839 /* RectanglePositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC163024066EA3000F7839 /* RectanglePositioner.swift */; };
-		A0AC163324066EA3000F7839 /* RectanglePositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC163024066EA3000F7839 /* RectanglePositioner.swift */; };
 		A0AC163424066EA3000F7839 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC163124066EA3000F7839 /* Robot.swift */; };
 		A0AC163524066EA3000F7839 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC163124066EA3000F7839 /* Robot.swift */; };
+		A0FAE7CC2409032A00C8BF64 /* RectanglePositioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAE7CB2409032A00C8BF64 /* RectanglePositioner.swift */; };
+		A0FAE7D024090EAA00C8BF64 /* TabletopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAE7CF24090EAA00C8BF64 /* TabletopView.swift */; };
+		A0FAE7D224090EBB00C8BF64 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAE7D124090EBB00C8BF64 /* ControlsView.swift */; };
+		A0FAE7D424092C2500C8BF64 /* PositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAE7D324092C2400C8BF64 /* PositionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A07E7096240CF5120084C426 /* HalfBoldPixel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HalfBoldPixel.ttf; sourceTree = "<group>"; };
+		A07E7099240D0D160084C426 /* PixelFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelFont.swift; sourceTree = "<group>"; };
+		A07E709D240DE30C0084C426 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		A07E709F240DE8940084C426 /* ViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
+		A07E70A1240DED280084C426 /* ControlsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewModel.swift; sourceTree = "<group>"; };
+		A07E70A3240DF1610084C426 /* TabletopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabletopViewModel.swift; sourceTree = "<group>"; };
+		A07E70A5240DFBE90084C426 /* PositionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewModel.swift; sourceTree = "<group>"; };
 		A0AC15E0240514AA000F7839 /* Toy Robot Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toy Robot Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AC15E3240514AA000F7839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0AC15E5240514AA000F7839 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,8 +75,11 @@
 		A0AC162324066E86000F7839 /* Turnable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Turnable.swift; path = CLI/Sources/ToyRobotSimulator/Protocols/Turnable.swift; sourceTree = SOURCE_ROOT; };
 		A0AC162424066E86000F7839 /* Movable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movable.swift; path = CLI/Sources/ToyRobotSimulator/Protocols/Movable.swift; sourceTree = SOURCE_ROOT; };
 		A0AC162524066E86000F7839 /* Reportable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reportable.swift; path = CLI/Sources/ToyRobotSimulator/Protocols/Reportable.swift; sourceTree = SOURCE_ROOT; };
-		A0AC163024066EA3000F7839 /* RectanglePositioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RectanglePositioner.swift; path = CLI/Sources/ToyRobotSimulator/Robot/RectanglePositioner.swift; sourceTree = SOURCE_ROOT; };
 		A0AC163124066EA3000F7839 /* Robot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Robot.swift; path = CLI/Sources/ToyRobotSimulator/Robot/Robot.swift; sourceTree = SOURCE_ROOT; };
+		A0FAE7CB2409032A00C8BF64 /* RectanglePositioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RectanglePositioner.swift; path = CLI/Sources/ToyRobotSimulator/Positioner/RectanglePositioner.swift; sourceTree = SOURCE_ROOT; };
+		A0FAE7CF24090EAA00C8BF64 /* TabletopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabletopView.swift; sourceTree = "<group>"; };
+		A0FAE7D124090EBB00C8BF64 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
+		A0FAE7D324092C2400C8BF64 /* PositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +100,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A07E7098240D0CFF0084C426 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A07E7099240D0D160084C426 /* PixelFont.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A07E709C240DE2EA0084C426 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A07E709F240DE8940084C426 /* ViewModelProtocols.swift */,
+				A07E709D240DE30C0084C426 /* ContentViewModel.swift */,
+				A07E70A1240DED280084C426 /* ControlsViewModel.swift */,
+				A07E70A3240DF1610084C426 /* TabletopViewModel.swift */,
+				A07E70A5240DFBE90084C426 /* PositionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		A0AC15D7240514AA000F7839 = {
 			isa = PBXGroup;
 			children = (
@@ -102,14 +141,16 @@
 		A0AC15E2240514AA000F7839 /* Toy Robot Simulator */ = {
 			isa = PBXGroup;
 			children = (
-				A0AC160D24051F30000F7839 /* Protocols */,
-				A0AC160524051550000F7839 /* Robot */,
+				A0FAE7CD240905ED00C8BF64 /* Views */,
+				A07E709C240DE2EA0084C426 /* ViewModels */,
+				A0FAE7CE24090B5900C8BF64 /* DataStructures */,
+				A07E7098240D0CFF0084C426 /* Extensions */,
 				A0AC15E3240514AA000F7839 /* AppDelegate.swift */,
 				A0AC15E5240514AA000F7839 /* SceneDelegate.swift */,
-				A0AC15E7240514AA000F7839 /* ContentView.swift */,
 				A0AC15E9240514AB000F7839 /* Assets.xcassets */,
 				A0AC15EE240514AB000F7839 /* LaunchScreen.storyboard */,
 				A0AC15F1240514AB000F7839 /* Info.plist */,
+				A07E7096240CF5120084C426 /* HalfBoldPixel.ttf */,
 				A0AC15EB240514AB000F7839 /* Preview Content */,
 			);
 			path = "Toy Robot Simulator";
@@ -136,10 +177,10 @@
 		A0AC160524051550000F7839 /* Robot */ = {
 			isa = PBXGroup;
 			children = (
-				A0AC163024066EA3000F7839 /* RectanglePositioner.swift */,
 				A0AC163124066EA3000F7839 /* Robot.swift */,
 			);
-			path = Robot;
+			name = Robot;
+			path = ../Robot;
 			sourceTree = "<group>";
 		};
 		A0AC160D24051F30000F7839 /* Protocols */ = {
@@ -151,7 +192,38 @@
 				A0AC162524066E86000F7839 /* Reportable.swift */,
 				A0AC162324066E86000F7839 /* Turnable.swift */,
 			);
-			path = Protocols;
+			name = Protocols;
+			path = ../Protocols;
+			sourceTree = "<group>";
+		};
+		A0FAE7CA2409024800C8BF64 /* Positioner */ = {
+			isa = PBXGroup;
+			children = (
+				A0FAE7CB2409032A00C8BF64 /* RectanglePositioner.swift */,
+			);
+			name = Positioner;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A0FAE7CD240905ED00C8BF64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A0AC15E7240514AA000F7839 /* ContentView.swift */,
+				A0FAE7D124090EBB00C8BF64 /* ControlsView.swift */,
+				A0FAE7CF24090EAA00C8BF64 /* TabletopView.swift */,
+				A0FAE7D324092C2400C8BF64 /* PositionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A0FAE7CE24090B5900C8BF64 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				A0AC160D24051F30000F7839 /* Protocols */,
+				A0FAE7CA2409024800C8BF64 /* Positioner */,
+				A0AC160524051550000F7839 /* Robot */,
+			);
+			path = DataStructures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +309,7 @@
 				A0AC15F0240514AB000F7839 /* LaunchScreen.storyboard in Resources */,
 				A0AC15ED240514AB000F7839 /* Preview Assets.xcassets in Resources */,
 				A0AC15EA240514AB000F7839 /* Assets.xcassets in Resources */,
+				A07E709B240D0F250084C426 /* HalfBoldPixel.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,12 +329,21 @@
 			files = (
 				A0AC163424066EA3000F7839 /* Robot.swift in Sources */,
 				A0AC162624066E86000F7839 /* Positionable.swift in Sources */,
+				A0FAE7D024090EAA00C8BF64 /* TabletopView.swift in Sources */,
+				A0FAE7D424092C2500C8BF64 /* PositionView.swift in Sources */,
+				A07E70A0240DE8940084C426 /* ViewModelProtocols.swift in Sources */,
+				A07E709E240DE30C0084C426 /* ContentViewModel.swift in Sources */,
 				A0AC162824066E86000F7839 /* Placeable.swift in Sources */,
+				A07E70A4240DF1610084C426 /* TabletopViewModel.swift in Sources */,
+				A07E70A6240DFBE90084C426 /* PositionViewModel.swift in Sources */,
+				A07E70A2240DED280084C426 /* ControlsViewModel.swift in Sources */,
+				A07E709A240D0D160084C426 /* PixelFont.swift in Sources */,
+				A0FAE7D224090EBB00C8BF64 /* ControlsView.swift in Sources */,
+				A0FAE7CC2409032A00C8BF64 /* RectanglePositioner.swift in Sources */,
 				A0AC162E24066E86000F7839 /* Reportable.swift in Sources */,
 				A0AC162C24066E86000F7839 /* Movable.swift in Sources */,
 				A0AC15E4240514AA000F7839 /* AppDelegate.swift in Sources */,
 				A0AC15E6240514AA000F7839 /* SceneDelegate.swift in Sources */,
-				A0AC163224066EA3000F7839 /* RectanglePositioner.swift in Sources */,
 				A0AC162A24066E86000F7839 /* Turnable.swift in Sources */,
 				A0AC15E8240514AA000F7839 /* ContentView.swift in Sources */,
 			);
@@ -276,7 +358,6 @@
 				A0AC161524052683000F7839 /* RobotTests.swift in Sources */,
 				A0AC162724066E86000F7839 /* Positionable.swift in Sources */,
 				A0AC162F24066E86000F7839 /* Reportable.swift in Sources */,
-				A0AC163324066EA3000F7839 /* RectanglePositioner.swift in Sources */,
 				A0AC162D24066E86000F7839 /* Movable.swift in Sources */,
 				A0AC163524066EA3000F7839 /* Robot.swift in Sources */,
 				A0AC15FB240514AC000F7839 /* RectanglePositionerTests.swift in Sources */,
