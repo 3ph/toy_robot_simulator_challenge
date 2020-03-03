@@ -13,6 +13,9 @@ struct ContentView: View {
         GeometryReader { geometry in
             VStack(alignment: .center, spacing: 10) {
                 Spacer()
+                Text("TOY ROBOT SIMULATOR")
+                    .font(Font.pixel)
+                    .multilineTextAlignment(.center)
                 Text("Place robot on the tabletop by tapping on the desired cell. Location of the tap will determine facing direction of the robot.")
                     .font(Font.smallPixel)
                     .multilineTextAlignment(.center)
@@ -25,7 +28,7 @@ struct ContentView: View {
                 Spacer()
                 ControlsView(viewModel: self.contentViewModel.controlsViewModel)
                 Spacer()
-            }.font(Font.custom("HalfBoldPixel", size: 20))
+            }
         }
     }
 }
