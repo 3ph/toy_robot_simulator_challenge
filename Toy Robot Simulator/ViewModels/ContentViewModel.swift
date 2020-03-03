@@ -6,12 +6,15 @@
 //
 
 import Foundation
+import Combine
 
-final class ContentViewModel: TabletopViewModelProtocol, ObservableObject {
-    @Published var robotPosition: Position?
-    
+final class ContentViewModel: ObservableObject {
     var controlsViewModel: ControlsViewModel {
         return _controlsViewModel
+    }
+    
+    var tabletopViewModel: TabletopViewModel {
+       return _tabletopViewModel
     }
     
     
@@ -19,14 +22,25 @@ final class ContentViewModel: TabletopViewModelProtocol, ObservableObject {
         _robot = Robot(positioner: RectanglePositioner(height: numRows, width: numColumns))
         
         _controlsViewModel = ControlsViewModel(robot: _robot)
+        _tabletopViewModel = TabletopViewModel(numRows: numRows, numColumns: numColumns)
         
         // FIXME: testing
         _robot.place(position: Position(facingDirection: .south, coordinate: Coordinate(x: 2, y: 2)))
+        
+        _controlsViewModel.$robotPosition
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { position in
+                self.tabletopViewModel.robotPosition.send(position)
+            })
+            .store(in: &_subscriptions)
     }
     
     // MARK: - Private
     private let _robot: Robot
     private let _controlsViewModel: ControlsViewModel
+    private let _tabletopViewModel: TabletopViewModel
+    /// Dispose bag for the subscription
+    private var _subscriptions = Set<AnyCancellable>()
 }
 
 extension ContentViewModel: Placeable {

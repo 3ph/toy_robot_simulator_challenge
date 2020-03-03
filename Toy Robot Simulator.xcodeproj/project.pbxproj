@@ -12,6 +12,8 @@
 		A07E709E240DE30C0084C426 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E709D240DE30C0084C426 /* ContentViewModel.swift */; };
 		A07E70A0240DE8940084C426 /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E709F240DE8940084C426 /* ViewModelProtocols.swift */; };
 		A07E70A2240DED280084C426 /* ControlsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E70A1240DED280084C426 /* ControlsViewModel.swift */; };
+		A07E70A4240DF1610084C426 /* TabletopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E70A3240DF1610084C426 /* TabletopViewModel.swift */; };
+		A07E70A6240DFBE90084C426 /* PositionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E70A5240DFBE90084C426 /* PositionViewModel.swift */; };
 		A0AC15E4240514AA000F7839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC15E3240514AA000F7839 /* AppDelegate.swift */; };
 		A0AC15E6240514AA000F7839 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC15E5240514AA000F7839 /* SceneDelegate.swift */; };
 		A0AC15E8240514AA000F7839 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC15E7240514AA000F7839 /* ContentView.swift */; };
@@ -54,6 +56,8 @@
 		A07E709D240DE30C0084C426 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		A07E709F240DE8940084C426 /* ViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
 		A07E70A1240DED280084C426 /* ControlsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewModel.swift; sourceTree = "<group>"; };
+		A07E70A3240DF1610084C426 /* TabletopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabletopViewModel.swift; sourceTree = "<group>"; };
+		A07E70A5240DFBE90084C426 /* PositionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionViewModel.swift; sourceTree = "<group>"; };
 		A0AC15E0240514AA000F7839 /* Toy Robot Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toy Robot Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AC15E3240514AA000F7839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0AC15E5240514AA000F7839 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				A07E709F240DE8940084C426 /* ViewModelProtocols.swift */,
 				A07E709D240DE30C0084C426 /* ContentViewModel.swift */,
 				A07E70A1240DED280084C426 /* ControlsViewModel.swift */,
+				A07E70A3240DF1610084C426 /* TabletopViewModel.swift */,
+				A07E70A5240DFBE90084C426 /* PositionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -203,8 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				A0AC15E7240514AA000F7839 /* ContentView.swift */,
-				A0FAE7CF24090EAA00C8BF64 /* TabletopView.swift */,
 				A0FAE7D124090EBB00C8BF64 /* ControlsView.swift */,
+				A0FAE7CF24090EAA00C8BF64 /* TabletopView.swift */,
 				A0FAE7D324092C2400C8BF64 /* PositionView.swift */,
 			);
 			path = Views;
@@ -328,6 +334,8 @@
 				A07E70A0240DE8940084C426 /* ViewModelProtocols.swift in Sources */,
 				A07E709E240DE30C0084C426 /* ContentViewModel.swift in Sources */,
 				A0AC162824066E86000F7839 /* Placeable.swift in Sources */,
+				A07E70A4240DF1610084C426 /* TabletopViewModel.swift in Sources */,
+				A07E70A6240DFBE90084C426 /* PositionViewModel.swift in Sources */,
 				A07E70A2240DED280084C426 /* ControlsViewModel.swift in Sources */,
 				A07E709A240D0D160084C426 /* PixelFont.swift in Sources */,
 				A0FAE7D224090EBB00C8BF64 /* ControlsView.swift in Sources */,

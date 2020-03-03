@@ -8,11 +8,11 @@
 import Foundation
 
 class ControlsViewModel: ControlsViewModelProtocol, ObservableObject {
-    
-    @Published var positionString: String = ""
+    @Published var robotPosition: Position?
+    @Published var positionString: String = "UNKNOWN"
     
     var robotPositionString: String {
-        return _robot?.report() ?? ""
+        return positionString
     }
     
     init(robot: Robot?) {
@@ -26,16 +26,19 @@ class ControlsViewModel: ControlsViewModelProtocol, ObservableObject {
 extension ControlsViewModel: Movable {
     func move() {
         _robot?.move()
+        robotPosition = _robot?.position
     }
 }
 
 extension ControlsViewModel: Turnable {
     func left() {
         _robot?.left()
+        robotPosition = _robot?.position
     }
     
     func right() {
         _robot?.right()
+        robotPosition = _robot?.position
     }
 }
 

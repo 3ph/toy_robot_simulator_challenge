@@ -8,26 +8,29 @@
 import SwiftUI
 
 struct PositionView: View {
-    
     @State var isImageHidden: Bool = true
-
+    
     var body: some View {
         _image
             .resizable()
             .scaleEffect(0.9)
             .opacity(isImageHidden ? 0 : 1)
+            .onReceive(_viewModel.selectedIndex) { index in
+                self.isImageHidden = index != self._index
+        }
     }
-    
-    init(imageName: String) {
-        _image = Image(imageName)
+
+    init(viewModel: PositionViewModel, index: Int) {
+        _image = Image(viewModel.imageName)
+        _viewModel = viewModel
+        _index = index
     }
     
     // MARK: - Private
+    /// View model
+    @ObservedObject private var _viewModel: PositionViewModel
+    /// Cell image
     private let _image: Image
-}
-
-struct PositionView_Previews: PreviewProvider {
-    static var previews: some View {
-        PositionView(imageName: "bender")
-    }
+    /// Index of the cell
+    private let _index: Int
 }

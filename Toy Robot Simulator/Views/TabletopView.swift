@@ -27,24 +27,26 @@ struct TabletopView: View {
         }
     }
     
-    init(numColumns: Int, numRows: Int) {
-        _numColumns = numColumns
-        _numRows = numRows
-        
-        _cells = Array(repeating: PositionView(imageName: "bender"), count: _numRows * _numColumns)
+    init(viewModel: TabletopViewModel) {
+        _viewModel = viewModel
+
+        _cells = []
+        for index in 0..<viewModel.numRows * viewModel.numColumns {
+            _cells.append(PositionView(viewModel: _viewModel.positionViewModel, index: index))
+        }
     }
     
-//    private let _viewModel: TabletopViewModel(numRows: _numRows, numColumns: _numColumns)
-    
-    /// Width of the tabletop in units (number of columns)
-    private let _numColumns: Int
-    /// Height of the tabletop in units (number of rows)
-    private let _numRows: Int
-    private let _cells: [PositionView]
-}
-
-struct TabletopView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabletopView(numColumns: 5, numRows: 5)
+    // MARK: - Private
+    /// View model
+    private let _viewModel: TabletopViewModel
+    /// PositionViews representing the cells in the tabletop grid
+    private var _cells: [PositionView]
+    /// Number of rows of the tabletop grid
+    private var _numRows: Int {
+        return _viewModel.numRows
+    }
+    /// Number of columns of the tabletop grid
+    private var _numColumns: Int {
+        return _viewModel.numColumns
     }
 }

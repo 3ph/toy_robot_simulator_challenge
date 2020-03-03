@@ -17,7 +17,7 @@ struct ContentView: View {
                     .font(Font.smallPixel)
                     .multilineTextAlignment(.center)
                 Spacer()
-                TabletopView(numColumns: 5, numRows: 5)
+                TabletopView(viewModel: self.contentViewModel.tabletopViewModel)
                     .frame(width: geometry.size.width * 0.4,
                            height: geometry.size.height * 0.4,
                            alignment: .center)
