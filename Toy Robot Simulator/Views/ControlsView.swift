@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct ControlsView: View {
+    
     var body: some View {
         VStack {
             HStack(alignment: .center, spacing: 10) {
                 Spacer()
                 Button(action: {
+                    self._viewModel.left()
                 }, label: {
                     Text("left")
                         .font(Font.pixel)
@@ -20,6 +22,7 @@ struct ControlsView: View {
                 })
                 Spacer()
                 Button(action: {
+                    self._viewModel.move()
                 }, label: {
                     Text("move")
                         .font(Font.pixel)
@@ -27,6 +30,7 @@ struct ControlsView: View {
                 })
                 Spacer()
                 Button(action: {
+                    self._viewModel.right()
                 }, label: {
                     Text("right")
                         .font(Font.pixel)
@@ -37,6 +41,7 @@ struct ControlsView: View {
             Spacer()
                 .frame(height: 20)
             Button(action: {
+                _ = self._viewModel.report()
             }, label: {
                 Text("report")
                     .font(Font.pixel)
@@ -44,17 +49,18 @@ struct ControlsView: View {
             })
             Spacer()
                 .frame(height: 25)
-            Text("1,1,N")
+            Text("\(_viewModel.robotPositionString)")
                 .font(Font.pixel)
                 .foregroundColor(Color.black)
                 .padding(5)
                 .border(Color.black, width: 1)
         }
     }
-}
-
-struct ControlsView_Previews: PreviewProvider {
-    static var previews: some View {
-        ControlsView()
+    
+    init(viewModel: ControlsViewModel) {
+        _viewModel = viewModel
     }
+    
+    // MARK: - Private
+    @ObservedObject var _viewModel: ControlsViewModel
 }

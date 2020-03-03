@@ -34,6 +34,8 @@ struct TabletopView: View {
         _cells = Array(repeating: PositionView(imageName: "bender"), count: _numRows * _numColumns)
     }
     
+//    private let _viewModel: TabletopViewModel(numRows: _numRows, numColumns: _numColumns)
+    
     /// Width of the tabletop in units (number of columns)
     private let _numColumns: Int
     /// Height of the tabletop in units (number of rows)

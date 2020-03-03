@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    var contentViewModel = ContentViewModel(numRows: 5, numColumns: 5)
     var body: some View {
         GeometryReader { geometry in
             VStack(alignment: .center, spacing: 10) {
@@ -21,7 +22,7 @@ struct ContentView: View {
                            height: geometry.size.height * 0.4,
                            alignment: .center)
                 Spacer()
-                ControlsView()
+                ControlsView(viewModel: self.contentViewModel.controlsViewModel)
                 Spacer()
             }.font(Font.custom("HalfBoldPixel", size: 20))
         }

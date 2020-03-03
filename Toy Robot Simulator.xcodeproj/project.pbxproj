@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A07E709A240D0D160084C426 /* PixelFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E7099240D0D160084C426 /* PixelFont.swift */; };
 		A07E709B240D0F250084C426 /* HalfBoldPixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A07E7096240CF5120084C426 /* HalfBoldPixel.ttf */; };
+		A07E709E240DE30C0084C426 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E709D240DE30C0084C426 /* ContentViewModel.swift */; };
+		A07E70A0240DE8940084C426 /* ViewModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E709F240DE8940084C426 /* ViewModelProtocols.swift */; };
+		A07E70A2240DED280084C426 /* ControlsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07E70A1240DED280084C426 /* ControlsViewModel.swift */; };
 		A0AC15E4240514AA000F7839 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC15E3240514AA000F7839 /* AppDelegate.swift */; };
 		A0AC15E6240514AA000F7839 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC15E5240514AA000F7839 /* SceneDelegate.swift */; };
 		A0AC15E8240514AA000F7839 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC15E7240514AA000F7839 /* ContentView.swift */; };
@@ -48,6 +51,9 @@
 /* Begin PBXFileReference section */
 		A07E7096240CF5120084C426 /* HalfBoldPixel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HalfBoldPixel.ttf; sourceTree = "<group>"; };
 		A07E7099240D0D160084C426 /* PixelFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelFont.swift; sourceTree = "<group>"; };
+		A07E709D240DE30C0084C426 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		A07E709F240DE8940084C426 /* ViewModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocols.swift; sourceTree = "<group>"; };
+		A07E70A1240DED280084C426 /* ControlsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewModel.swift; sourceTree = "<group>"; };
 		A0AC15E0240514AA000F7839 /* Toy Robot Simulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toy Robot Simulator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AC15E3240514AA000F7839 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0AC15E5240514AA000F7839 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A07E709C240DE2EA0084C426 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A07E709F240DE8940084C426 /* ViewModelProtocols.swift */,
+				A07E709D240DE30C0084C426 /* ContentViewModel.swift */,
+				A07E70A1240DED280084C426 /* ControlsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		A0AC15D7240514AA000F7839 = {
 			isa = PBXGroup;
 			children = (
@@ -119,9 +135,10 @@
 		A0AC15E2240514AA000F7839 /* Toy Robot Simulator */ = {
 			isa = PBXGroup;
 			children = (
-				A07E7098240D0CFF0084C426 /* Extensions */,
-				A0FAE7CE24090B5900C8BF64 /* DataStructures */,
 				A0FAE7CD240905ED00C8BF64 /* Views */,
+				A07E709C240DE2EA0084C426 /* ViewModels */,
+				A0FAE7CE24090B5900C8BF64 /* DataStructures */,
+				A07E7098240D0CFF0084C426 /* Extensions */,
 				A0AC15E3240514AA000F7839 /* AppDelegate.swift */,
 				A0AC15E5240514AA000F7839 /* SceneDelegate.swift */,
 				A0AC15E9240514AB000F7839 /* Assets.xcassets */,
@@ -308,7 +325,10 @@
 				A0AC162624066E86000F7839 /* Positionable.swift in Sources */,
 				A0FAE7D024090EAA00C8BF64 /* TabletopView.swift in Sources */,
 				A0FAE7D424092C2500C8BF64 /* PositionView.swift in Sources */,
+				A07E70A0240DE8940084C426 /* ViewModelProtocols.swift in Sources */,
+				A07E709E240DE30C0084C426 /* ContentViewModel.swift in Sources */,
 				A0AC162824066E86000F7839 /* Placeable.swift in Sources */,
+				A07E70A2240DED280084C426 /* ControlsViewModel.swift in Sources */,
 				A07E709A240D0D160084C426 /* PixelFont.swift in Sources */,
 				A0FAE7D224090EBB00C8BF64 /* ControlsView.swift in Sources */,
 				A0FAE7CC2409032A00C8BF64 /* RectanglePositioner.swift in Sources */,
